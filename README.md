@@ -1,149 +1,298 @@
-![Yandex Scraper Featured Image](https://raw.githubusercontent.com/omkarcloud/yandex-scraper/master/images/yandex-scraper-featured-image.png)
+# Yandex Search API
 
-<div align="center" style="margin-top: 0;">
-  <h1>✨ Yandex Scraper 🚀</h1>
-  <p>💦 Yandex Scraper helps you collect search results from Yandex. 💦</p>
-</div>
-<em>
-  <h5 align="center">(Programming Language - Python 3)</h5>
-</em>
-<p align="center">
-  <a href="#">
-    <img alt="yandex-scraper forks" src="https://img.shields.io/github/forks/omkarcloud/yandex-scraper?style=for-the-badge" />
-  </a>
-  <a href="#">
-    <img alt="Repo stars" src="https://img.shields.io/github/stars/omkarcloud/yandex-scraper?style=for-the-badge&color=yellow" />
-  </a>
-  <a href="#">
-    <img alt="yandex-scraper License" src="https://img.shields.io/github/license/omkarcloud/yandex-scraper?color=orange&style=for-the-badge" />
-  </a>
-  <a href="https://github.com/omkarcloud/yandex-scraper/issues">
-    <img alt="issues" src="https://img.shields.io/github/issues/omkarcloud/yandex-scraper?color=purple&style=for-the-badge" />
-  </a>
-</p>
-<p align="center">
-  <img src="https://views.whatilearened.today/views/github/omkarcloud/yandex-scraper.svg" width="80px" height="28px" alt="View" />
-</p>
+Scrape Yandex organic results, knowledge panels, image and video carousels, and sponsored ads via a simple REST API. Works across every Yandex domain — `yandex.com`, `yandex.ru`, `yandex.com.tr`, `yandex.kz`, and more. Skip the proxies, captchas, and parsing — get clean JSON in one request. 25 free queries/month, no credit card.
 
-<p align="center">
-  <a href="https://gitpod.io/#https://github.com/omkarcloud/yandex-scraper">
-    <img alt="Open in Gitpod" src="https://gitpod.io/button/open-in-gitpod.svg" />
-  </a>
-</p>
-  
----
+## Key Features
 
-## Disclaimer for Yandex Scraper Project
+- Scrape Yandex organic results, knowledge panels, image carousels, and ad results — all from one API.
+- 25 free queries per month. No credit card required.
 
-> By using Yandex Scraper, you agree to comply with all applicable local and international laws related to data scraping, copyright, and privacy. The developers of Yandex Scraper will not be held liable for any misuse of this software. It is the user's sole responsibility to ensure adherence to all relevant laws regarding data scraping, copyright, and privacy, and to use Yandex Scraper in an ethical and legal manner, in line with both local and international regulations.
+Here's a sample organic result:
 
-We take concerns related to the Yandex Scraper Project very seriously. If you have any inquiries or issues, please contact Chetan Jain at [chetan@omkar.cloud](mailto:chetan@omkar.cloud). We will take prompt and necessary action in response to your emails.
-
-## 👉 Explore Our Other Awesome Products
-
-- ✅ [Botasaurus](https://github.com/omkarcloud/botasaurus): The All-in-One Web Scraping Framework with Anti-Detection, Parallelization, Asynchronous, and Caching Superpowers.
-
----
-
-Yandex Scraper helps you collect search results from Yandex.
-
-## 🚀 Getting Started
-
-1️⃣ **Clone the Magic 🧙‍♀:**
-```shell
-git clone https://github.com/omkarcloud/yandex-scraper
-cd yandex-scraper
-```
-2️⃣ **Install Dependencies 📦:**
-```shell
-python -m pip install -r requirements.txt
-```
-3️⃣ **Let the Scraping Begin 😎**:
-```shell
-python main.py
+```json
+{
+  "rank": 1,
+  "title": null,
+  "url": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+  "description": "Linus Benedict Torvalds[a] (born 28 December 1969) is a Finnish and American software engineer who is the creator and lead developer of the Linux kernel since 1991."
+}
 ```
 
-Find your data in the `output` directory.
+## Get API Key
 
-![Yandex Scraper CSV Result](https://raw.githubusercontent.com/omkarcloud/yandex-scraper/master/images/yandex-scraper-csv-result.png)
+Create an account at [omkar.cloud](https://www.omkar.cloud/auth/sign-up?redirect=/api-key) to get your API key.
 
-*Note: If you don't have Python installed. Follow this Simple FAQ [here](https://github.com/omkarcloud/yandex-scraper/blob/master/advanced.md#-i-dont-have-python-installed-how-can-i-run-the-scraper) and you will have your Yandex data in next 5 Minutes*
+It takes 2 minutes to sign up. You get 25 free queries every month for full Yandex SERPs.
 
-## 🤔 FAQs
+This is the best Yandex Search API on the market. Your search ends here.
 
-### ❓ How to Scrape Yandex?
-
-1. Open the `main.py` file.
-2. Update the `queries` list with the locations you are interested in. For example:
-
-```python
-queries = [
-  "Mango",
-  "Watermelon",
-]
-
-Yandex.search(queries, max=10)
-```
-
-3. Run it.
+## Quick Start
 
 ```bash
-python main.py
+curl -X GET "https://yandex-scraper.omkar.cloud/yandex/serp?query=Linus%20Torvalds" \
+  -H "API-Key: YOUR_API_KEY"
 ```
 
-Then find your data in the `output` directory.
-
-
-### ❓ How to Scrape More Yandex Search Results Using Your Yandex API?
-
-To scrape additional data, follow these steps to use our Yandex API. You can make 50 requests for free:
-
-1. Sign up on RapidAPI by visiting [this link](https://rapidapi.com/auth/sign-up).
-
-![Sign Up on RapidAPI](https://raw.githubusercontent.com/omkarcloud/assets/master/images/sign-up.png)
-
-2. Then, subscribe to our Free Plan by visiting [this link](https://rapidapi.com/Chetan11dev/api/yandex-scraper/pricing).
-
-![Subscribe to Free Plan](https://raw.githubusercontent.com/omkarcloud/assets/master/images/free-subscription.png)
-
-3. Now, copy the API key.
-
-![Copy the API Key](https://raw.githubusercontent.com/omkarcloud/assets/master/images/api-key.png) 
-
-4. Use it in the scraper as follows:
-```python
-Yandex.search("Orange", max=10, key="YOUR_API_KEY")
+```json
+{
+  "result_count": 10,
+  "current_page": 1,
+  "next": "https://yandex-scraper.omkar.cloud/yandex/serp?query=Linus+Torvalds&page=2",
+  "previous": null,
+  "search_query": "Linus Torvalds",
+  "result_state": "Results for exact spelling",
+  "results": [
+    {
+      "rank": 1,
+      "title": null,
+      "url": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+      "description": "Linus Benedict Torvalds[a] (born 28 December 1969) is a Finnish and American software engineer who is the creator and lead developer of the Linux kernel since 1991."
+    }
+  ]
+}
 ```
 
-5. Run the script, and you'll find your data in the `output` folder.
+## Quick Start (Python)
+
 ```bash
-python main.py
-```   
+pip install requests
+```
 
-The first 50 requests are free. After that, you can upgrade to the Pro Plan, which will get you 1000 requests for just $9.
+```python
+import requests
 
+response = requests.get(
+    "https://yandex-scraper.omkar.cloud/yandex/serp",
+    params={"query": "Linus Torvalds"},
+    headers={"API-Key": "YOUR_API_KEY"}
+)
 
-### ❓ How did you build it?
+print(response.json())
+```
 
-We used Botasaurus, It's an All-in-One Web Scraping Framework with Anti-Detection, Parallelization, Asynchronous, and Caching Superpowers.
+## API Reference
 
-Botasaurus helped us cut down the development time by 50% and helped us focus only on the core extraction logic of the scraper.
+### SERP Lookup
 
-If you are a Web Scraper, you should learn about Botasaurus [here](https://github.com/omkarcloud/botasaurus), because Botasaurus will save you countless hours in your life as a Web Scraper.
+```
+GET https://yandex-scraper.omkar.cloud/yandex/serp
+```
 
-<p align="center">
-  <a href="https://github.com/omkarcloud/botasaurus">
-  <img src="https://raw.githubusercontent.com/omkarcloud/assets/master/images/mascot.png" alt="botasaurus" />
-</a>
-</p>
+#### Parameters
 
+| Parameter | Required | Default | Description |
+|-----------|----------|---------|-------------|
+| `query` | Yes | — | Search keyword or phrase. Accepts the same operators you'd type into Yandex (`site:`, `intitle:`, etc.). |
+| `domain` | No | `yandex.com` | Yandex top-level domain. Examples: `yandex.com`, `yandex.ru`, `yandex.uz`, `yandex.com.tr`, `yandex.kz`, `yandex.by`. Picks the region and default language. |
+| `language` | No | derived from `domain` | Interface and results language code (e.g., `tr`, `kk`, `uk`). |
+| `sort_by` | No | `best_match` | Result ordering: `best_match` (relevance) or `newest_first` (most recent). |
+| `page` | No | `1` | 1-based page number. |
 
-### ❓ Need More Help or Have Additional Questions?
+#### Example
 
-For further help, contact us on WhatsApp. We'll be happy to help you out.
+```python
+import requests
 
-[![Contact Us on WhatsApp about Yandex Scraper](https://raw.githubusercontent.com/omkarcloud/assets/master/images/whatsapp-us.png)](https://api.whatsapp.com/send?phone=918295042963&text=Hi,%20I%20would%20like%20to%20learn%20more%20about%20your%20products.)
+response = requests.get(
+    "https://yandex-scraper.omkar.cloud/yandex/serp",
+    params={"query": "Linus Torvalds"},
+    headers={"API-Key": "YOUR_API_KEY"}
+)
 
-## Love It? [Star It! ⭐](https://github.com/omkarcloud/yandex-scraper/stargazers)
+print(response.json())
+```
 
-## Made with ❤️ using [Botasaurus Web Scraping Framework](https://github.com/omkarcloud/botasaurus)
+#### Response Fields
+
+Returns organic results, sponsored ads, the knowledge panel (with biographical fields and related entities), inline image and video carousels, and pagination metadata — all in structured JSON.
+
+<details>
+<summary>Sample Response (click to expand)</summary>
+
+```json
+{
+  "result_count": 10,
+  "current_page": 1,
+  "next": "https://yandex-scraper.omkar.cloud/yandex/serp?query=Linus+Torvalds&page=2",
+  "previous": null,
+  "search_query": "Linus Torvalds",
+  "result_state": "Results for exact spelling",
+  "results": [
+    {
+      "rank": 1,
+      "title": null,
+      "url": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+      "description": "Linus Benedict Torvalds[a] (born 28 December 1969) is a Finnish and American software engineer who is the creator and lead developer of the Linux kernel since 1991."
+    },
+    {
+      "rank": 2,
+      "title": null,
+      "url": "https://www.youtube.com/watch?v=o8NPllzkFhE",
+      "description": "Linus Torvalds transformed technology twice — first with the Linux kernel, which helps power the Internet, and again with Git, the source code management sys...Duration 21 minutes 29 seconds7 mln viewsPublished on3 May 2016"
+    },
+    {
+      "rank": 3,
+      "title": null,
+      "url": "https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux",
+      "description": "Linus Torvalds transformed technology twice -- first with the Linux kernel, which helps power the Internet, and again with Git, the source code management system..."
+    }
+  ],
+  "knowledge_panel": {
+    "title": "Linus Torvalds",
+    "header_images": [
+      "https://avatars.mds.yandex.net/i?id=a4fba0a7a3170e332e64269e305908fdae08d7f0-10700817-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=be3e1268c1da6da49958e98ea407785a592c5ad7-8491894-images-thumbs&n=13"
+    ],
+    "description": "Finnish and American software engineer who is the creator and lead developer of the Linux kernel since 1991. He also created the distributed version control system Git.",
+    "source": {
+      "name": "en.wikipedia.org",
+      "link": "http://en.wikipedia.org/wiki/Linus Torvalds"
+    },
+    "born": "December 28, 1969 (56 years), Helsinki, Finland",
+    "height": "177 cm",
+    "married_to": "Tove Torvalds",
+    "parents": "Anna Torvalds, Nils Torvalds",
+    "children": "Daniela Yolanda Torvalds, Celeste Amanda Torvalds, Patricia Miranda Torvalds",
+    "website": "torvalds-family.blogspot.com",
+    "see_also": [
+      {
+        "name": "Bill Gates",
+        "link": "https://yandex.com/search?text=Bill%20Gates&lr=84&ento=0oCghydXczMjEzMBINcnV3NTY3NTphc3NvYxgDeghTZWUgYWxzbw",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/2048976/1220586808/S88x116Face_2x"
+      },
+      {
+        "name": "Tim Berners-Lee",
+        "link": "https://yandex.com/search?text=Tim%20Berners-Lee&lr=84&ento=0oCghydXc1MzgwNhINcnV3NTY3NTphc3NvYxgDeghTZWUgYWxzbw",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/2321801/1248064640/S88x116Face_2x"
+      },
+      {
+        "name": "Richard Stallman",
+        "link": "https://yandex.com/search?text=Richard%20Stallman&lr=84&ento=0oCgdydXc4NjY3Eg1ydXc1Njc1OmFzc29jGAN6CFNlZSBhbHNv",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/137430/1229656801/S88x116Face_2x"
+      }
+    ]
+  },
+  "images": [
+    {
+      "image_url": "https://searchapi.api.cloud.yandex.net/v2/web/search/images/search?text=Linus+Torvalds&img_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F69%2FLinus_Torvalds.jpeg%2F500px-Linus_Torvalds.jpeg&pos=0&rpt=simage"
+    },
+    {
+      "image_url": "https://searchapi.api.cloud.yandex.net/v2/web/search/images/search?text=Linus+Torvalds&img_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F2f%2FLinus_Torvalds_talking.jpeg%2F500px-Linus_Torvalds_talking.jpeg&pos=1&rpt=simage"
+    }
+  ]
+}
+```
+
+</details>
+
+### Supported Yandex Domains
+
+`yandex.com`, `yandex.ru`, `yandex.com.tr`, `yandex.kz`, `yandex.by`, `yandex.uz`
+
+Pass any of these via the `domain` parameter. The default language and regional result mix follow automatically — override with `language` if you need to.
+
+## Error Handling
+
+```python
+response = requests.get(
+    "https://yandex-scraper.omkar.cloud/yandex/serp",
+    params={"query": "Linus Torvalds"},
+    headers={"API-Key": "YOUR_API_KEY"}
+)
+
+if response.status_code == 200:
+    data = response.json()
+elif response.status_code == 401:
+    # Invalid API key
+    pass
+elif response.status_code == 429:
+    # Rate limit exceeded
+    pass
+```
+
+## FAQs
+
+### What data does the API return?
+
+**SERP Lookup** returns per response:
+
+Top-level fields:
+- `search_query` — the query Yandex actually ran (after typo correction)
+- `result_state` — how Yandex matched your query
+- `result_count`, `current_page`, `next`, `previous` — pagination metadata
+
+Per organic result:
+- Rank, title, URL, description, display URL
+- Thumbnail image, date text, video duration, video quality (when present)
+- Sub-links (inline and expanded sitelinks with title, URL, description)
+
+Sponsored results (ads):
+- Rank, title, URL, description, display URL
+- Thumbnail, duration, sitelinks
+
+Knowledge panel (when Yandex shows one):
+- Entity title and description
+- Header image gallery
+- Biographical fields (born, height, family, occupation, etc.)
+- Source attribution (Wikipedia, etc.)
+- Related entities ("see also") with names, links, and avatars
+
+Inline images carousel:
+- Image URL and (when available) title and thumbnail
+- `more_images_url` to fetch the full image SERP
+
+Inline videos carousel:
+- Title, URL, source name, source URL
+- Duration, thumbnail, view count, view text, publish date
+- `more_videos_url` to fetch the full video SERP
+
+All in structured JSON. Ready to use in your app.
+
+### Which Yandex domains and regions are supported?
+
+All of them. Pass any Yandex top-level domain via the `domain` parameter:
+
+- `yandex.com` — global, English defaults
+- `yandex.ru` — Russia
+- `yandex.com.tr` — Turkey
+- `yandex.kz` — Kazakhstan
+- `yandex.by` — Belarus
+- `yandex.uz` — Uzbekistan
+
+You also get the right default language and a regional result mix for each domain. Override the language with the `language` parameter if you need to.
+
+### Can I filter by recency (newest results first)?
+
+Yes — use the `sort_by` parameter:
+
+- `best_match` — Yandex's default relevance ranking
+- `newest_first` — most recent results first, surfacing news, fresh blog posts, and recent updates
+
+Combine this with paging to crawl the freshest content on any topic.
+
+### Why is `title` sometimes `null`?
+
+Yandex doesn't always emit a standalone title in the result block — for entity-heavy SERPs (people, places, brands) it ships the title in the knowledge panel instead. We pass `title: null` through honestly when Yandex omits it, rather than guessing. Use `url` and `description` as the always-present identifiers.
+
+### Do you handle pagination?
+
+Yes. Pass `page=2`, `page=3`, etc. Pages are 1-based.
+
+Every response includes ready-to-call `next` and `previous` URLs so you can walk pages without computing them yourself.
+
+## Rate Limits
+
+| Plan | Price | Requests/Month |
+|------|-------|----------------|
+| Free | $0 | 25 |
+| Starter | $16 | 800 |
+| Grow | $48 | 2,400 |
+| Scale | $148 | 7,400 |
+
+## Questions? We have answers.
+
+Reach out anytime. We will solve your query within 1 working day.
+
+[![Contact Us on WhatsApp about Yandex Search API](https://raw.githubusercontent.com/omkarcloud/assets/master/images/whatsapp-us.png)](https://api.whatsapp.com/send?phone=918178804274&text=I%20have%20a%20question%20about%20the%20Yandex%20Search%20API.)
+
+[![Contact Us on Email about Yandex Search API](https://raw.githubusercontent.com/omkarcloud/assets/master/images/ask-on-email.png)](mailto:happy.to.help@omkar.cloud?subject=Yandex%20Search%20API%20Question)
